@@ -16,12 +16,17 @@ export abstract class DioAccount {
   deposit = (value: number): void => {
     if(this.validateStatus()){
       this.balance = this.balance+=value
-      console.log(`Valor depositaco com sucesso, seu novo saldo é: R$ ${this.balance}`)
+      console.log(`Valor depositado com sucesso, seu novo saldo é: R$ ${this.balance}`)
     }
   }
 
-  withdraw = (): void => {
-    console.log('Voce sacou')
+  withdraw = (value: number): void => {
+    if (this.validateStatus() && value<=this.balance){
+      this.balance -= value
+      console.log(`Saque efetuado com sucesso, seu novo saldo é: R$ ${this.balance}`)
+    } else {
+      console.log(`Não foi possivel efetuar o saque, verifique o status de sua conta e o seu saldo`)
+    }
   }
 
   getBalance = (): void => {
