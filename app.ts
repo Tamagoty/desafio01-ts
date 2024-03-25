@@ -10,4 +10,6 @@ peopleAccount.withdraw(300)
 
 const companyAccount: CompanyAccount = new CompanyAccount('DIO', 20)
 companyAccount.deposit(200)
+companyAccount.withdraw(150)
 console.log(companyAccount)
+companyAccount.getLoan(100)

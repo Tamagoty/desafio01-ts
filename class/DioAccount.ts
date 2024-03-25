@@ -29,11 +29,11 @@ export abstract class DioAccount {
     }
   }
 
-  getBalance = (): void => {
-    console.log(this.balance)
+  getBalance = (): number => {
+    return this.balance
   }
 
-  private validateStatus = (): boolean => {
+  validateStatus = (): boolean => {
     if (this.status) {
       return this.status
     }
