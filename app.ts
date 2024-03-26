@@ -1,5 +1,6 @@
 import { CompanyAccount } from './class/CompanyAccount'
 import { PeopleAccount } from './class/PeopleAccount'
+import { PlusAccount } from './class/PlusAccount'
 
 const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Nath', 10)
 console.log(peopleAccount.getBalance())
@@ -13,3 +14,6 @@ companyAccount.deposit(200)
 companyAccount.withdraw(150)
 console.log(companyAccount)
 companyAccount.getLoan(100)
+
+const plusAccount: PlusAccount = new PlusAccount('UltraPop', 30)
+plusAccount.deposit(50)
