@@ -6,9 +6,9 @@ export class PlusAccount extends DioAccount {
     super(name, accountNumber)
   }
 
-  deposit = (value: number): void => {
+  depositPlus = (value: number): void => {
     if(this.validateStatus()) {
-      
+      this.deposit(value + 10)
       console.log(`Valor depositado com sucesso!`)
     }
   }

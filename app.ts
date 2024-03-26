@@ -16,4 +16,4 @@ console.log(companyAccount)
 companyAccount.getLoan(100)
 
 const plusAccount: PlusAccount = new PlusAccount('UltraPop', 30)
-plusAccount.deposit(50)
+plusAccount.depositPlus(50)
